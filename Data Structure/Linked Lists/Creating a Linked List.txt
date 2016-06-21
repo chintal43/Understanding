@@ -1,0 +1,15 @@
+Creating a Linked List:
+
+NOTE: When you’re discussing a linked list in an interview, make sure to understand whether it is a single linked list or a doubly linked list.
+
+1 class Node {
+2 Node next = null;
+3 int data;
+4 public Node(int d) { data = d; }
+5 void appendToTail(int d) {
+6 Node end = new Node(d);
+7 Node n = this;
+8 while (n.next != null) { n = n.next; }
+9 n.next = end;
+10 }
+11 }

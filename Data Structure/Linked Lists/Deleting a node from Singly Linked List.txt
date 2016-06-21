@@ -1,0 +1,15 @@
+Deleting a Node from a Singly Linked List
+
+1 Node deleteNode(Node head, int d) {
+2 Node n = head;
+3 if (n.data == d) {
+4 return head.next; /* moved head */
+5 }
+6 while (n.next != null) {
+7 if (n.next.data == d) {
+8 n.next = n.next.next;
+9 return head; /* head didn’t change */
+10 }
+11 n = n.next;
+12 }
+13 }

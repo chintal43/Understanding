@@ -1,0 +1,21 @@
+StringBuffer / StringBuilder
+
+Question: What is the running time of this code?
+
+1 public String makeSentence(String[] words) {
+2 StringBuffer sentence = new StringBuffer();
+3 for (String w : words) sentence.append(w);
+4 return sentence.toString();
+5 }
+
+Answer: 
+O(n^2), where n is the number of letters in sentence. 
+Here’s why: each time you append a string to sentence, you create a copy of sentence and run through all the letters in sentence to copy them over. 
+If you have to iterate through up to n characters each time in the loop, and you’re looping at least n times, that gives you an O(n^2) run time. 
+With StringBuffer (or StringBuilder) can help you avoid this problem.
+
+1 public String makeSentence(String[] words) {
+2 StringBuffer sentence = new StringBuffer();
+3 for (String w : words) sentence.append(w);
+4 return sentence.toString();
+5 }

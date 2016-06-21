@@ -1,0 +1,18 @@
+Implementing a Stack
+
+1 class Stack {
+2 Node top;
+3 Node pop() {
+4 if (top != null) {
+5 Object item = top.data;
+6 top = top.next;
+7 return item;
+8 }
+9 return null;
+10 }
+11 void push(Object item) {
+12 Node t = new Node(item);
+13 t.next = top;
+14 top = t;
+15 }
+16 }

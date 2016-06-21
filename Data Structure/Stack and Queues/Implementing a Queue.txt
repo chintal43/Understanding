@@ -1,0 +1,22 @@
+Implementing a Queue
+
+1 class Queue {
+2 Node first, last;
+3 void enqueue(Object item) {
+4 if (!first) {
+5 back = new Node(item);
+6 first = back;
+7 } else {
+8 back.next = new Node(item);
+9 back = back.next;
+10 }
+11 }
+12 Node dequeue(Node n) {
+13 if (front != null) {
+14 Object item = front.data;
+15 front = front.next;
+16 return item;
+17 }
+18 return null;
+19 }
+20 }
