@@ -1,0 +1,10 @@
+Hash Tables
+
+While not all problems can be solved with hash tables, a shocking number of interview problems can be. 
+Before your interview, make sure to practice both using and implementing hash tables.
+
+1 public HashMap<Integer, Student> buildMap(Student[] students) {
+2 HashMap<Integer, Student> map = new HashMap<Integer, Student>();
+3 for (Student s : students) map.put(s.getId(), s);
+4 return map;
+5 }
